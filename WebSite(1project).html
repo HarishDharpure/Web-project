@@ -1,0 +1,407 @@
+<html>
+    <head>
+        <title>My website</title>
+        <link rel="shortcut-icon" type="image/icon" href="icon.png">
+        <link rel="stylesheet" type="text/css" href="">
+        <meta name="viewport" content="width=device-widht,initial-scale=1"> 
+        <meta name="keyword" content="My,website">
+        <script>
+            var scrollInterval=setInterval(function(){
+                window.scrollT0(0,1000);
+            },50);
+            clearInterval(scrollInterval)
+         </script>
+        <style>
+            *{
+                padding:0;
+            }
+            body{
+                background-image:url(myweb/background.png);
+                background-size:cover;
+                background-position:center;
+                background-repeat:no-repeat;
+                height:100vh;
+                width:100vw;
+                margin:auto;
+            }
+            #logoimg{
+                margin:20px 60px;
+                width:120px;
+                height:auto;
+            }
+            #navbut{
+                position:fixed; 
+                top:20px; 
+                right:30px;
+                cursor:pointer;
+                z-index:2;
+            }
+            #sideNav ul{
+                list-style-type:none;
+                margin:30px 30px;
+            }
+            #sideNav a{
+                text-decoration:none;
+                font-family:sans-serif;
+                text-align:center;
+                font-size:30px;
+                line-height:80px;
+            }
+            #sideNav{
+                width:200px;
+                height:100vh;
+                background-color:pink;
+                position:fixed;
+                top:0;
+                right:-250px;
+                z-index:2;
+                transition:0.6s;
+            }
+            #divstyle{
+                margin-top:50px;
+            }
+            #divstyle div{
+                margin:10px 0;
+            }
+            #divbox{
+                width:10px;
+                height:10px;
+                background-color:palevioletred;
+            }
+            #divbox2{
+                width:50px;
+                height:4px;
+                background-color:pink;
+            }
+            #divbox3{
+                width:25px;
+                height:4px;
+                background-color:palevioletred;
+            }
+            #navcontentdiv{
+                width:300px;
+                height:auto;
+                margin-left:60px;
+            }
+            .navbut{
+                padding:15px 35px;
+                border:3px solid pink;
+                font-weight:800;
+                background-color:white;
+            }
+            #divmainabout{
+                width:400px;
+                height:auto;
+                text-align: right;
+                margin-right:140px;
+                margin-top:30px;
+            }
+            #mainimg{
+                width:50%;
+                height:auto;
+            }
+            #div1{
+               display:flex;
+               justify-content:space-between;
+               margin-top:200px;
+            }
+            #img3{
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                margin-top:140px;
+            }
+            #img3 div{
+                width:300px; 
+                height:auto;
+                text-align:center;
+            }
+            #img3 img{
+                width:60px;
+                height:auto;
+            }
+            #btntrial{
+                padding:10px 20px;
+                border:4px solid pink;
+                background-color:white;
+                font-weight:800;
+            }
+            .divbtntrial{
+               text-align:center;
+            }
+            #coursediv{
+                display:flex;
+
+            }
+            #coursediv{
+                margin-top:140px;
+                display:flex;
+                justify-content:space-between;
+            }
+            #btncourse{
+                padding:10px 25px;
+                background-color:white;
+                font-weight:800;
+                font-family:sans-serif;
+                border:4px solid pink;
+
+            }
+            #courseimg{
+                width:50%;
+                height:auto;
+
+            }
+            #coursecard{
+                width:350px;
+                height:auto;
+                margin-left:80px;
+
+            }
+            #divstartfree{
+                display:flex;
+                justify-content: space-between;
+                margin-top:100px;
+            }
+            #img2ndlast{
+                width: 50%;
+                height:auto;
+            }
+            #last2ndcard{
+                margin-top:60px;
+                width:350px;
+                height:auto;
+                margin-right:100px;
+                text-align:right;
+            }
+            #lastcard input{
+                padding:10px 25px;
+                border:3px solid pink;
+            }
+            #lastcard button{
+                padding:12px 25px;
+                border:3px solid pink;
+                font-weight:800;
+                background-color:white;
+            }
+            #lastcard{
+                display:flex;
+                justify-content: space-between;
+                margin-top:100px;
+            }
+            #lastcard img{
+                width: 50%;
+                height:auto;
+            }
+            #lastcard div{
+                margin-top:30px;
+                margin-left: 60px;
+                width:350px;
+                height:auto;
+            }
+            div table th{
+                color:pink;
+                font-weight:bold;
+                font-family:serif;
+            }
+            footer{
+                display:flex;
+                justify-content: space-between;
+                flex-wrap:nowrap;
+            }
+            @media all and (max-width:763px){
+                #logoimg{
+                    width:80px;
+                }
+                #img3{
+                    flex-direction:column;
+                }
+                #lastcard{
+                    display:block;
+                    background-image:url(myweb/contact.png);
+                    background-size:cover;
+
+                }
+            }        
+            </style>
+    </head>
+    <body>
+        <header>
+            <img src="myweb/logo.png" id="logoimg" type="image"/>
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="#lastcard">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="myweb/menu.png" height="40px" width="40px" id="navbut">
+            <script>
+                var menubtn=document.getElementById("navbut");
+                var sideNav=document.getElementById("sideNav");
+                
+                sideNav.style.right= "-250px";
+                menubtn.onclick=function(){
+                    if(sideNav.style.right == "-250px"){
+                        sideNav.style.right ="0";
+                    }
+                    else{
+                        sideNav.style.right = "-250px";
+                    }
+                }
+            </script>
+        <div id="navcontentdiv">
+            <h1>The purpose is to teach,bring learning to  people</h1>
+            <div id="divbox"></div>
+            <p id="navp">hello this is the website i have made by my own if you like this please like this website and incaurage me make more and more 
+                beautiful website and in improved form <br>Thank you</p>
+            <button class="navbut">Read More</button>
+            <div id="divstyle">
+                <div id="divbox"></div>
+                <div id="divbox2"></div>
+                <div id="divbox3"></div>
+            </div>
+        </div>
+        </header>
+        
+        <main>
+            <div id="div1">
+            <img src="myweb/about.png" id="mainimg">
+            <div id="divmainabout">
+                <h1>About Us</h1>
+                <div id="divbox"></div>
+                <p>hello this is the website i have made by my own if you like this please like this website and incaurage me make more and more 
+                    beautiful website and in improved form <br>Thank you</p>
+                    <div id="divstyle">
+                        <div id="divbox"></div>
+                        <div id="divbox2"></div>
+                        <div id="divbox3"></div>
+                    </div>
+                
+                    <h3>"Learning is not attained by chance,it must be sought for with ardor and attended to with diligence"</h3>
+                    <span>----Abigail Adams</span>
+            </div>
+            </div>
+
+            <section>
+                <div id="img3">
+                    <div>
+                        <img src="myweb/pic-1.png"/ >
+                        <h3>Learn Anywhere</h3>
+                        <p>Swicth between your computer tabler or mobile device.</p>
+                    </div>
+                    <div>
+                        <img src="myweb/pic-2.png" />
+                        <h3>Expert Teachers</h3>
+                        <p>Learn from experts who are passionate about teaching.</p>
+                    </div>
+                    <div>
+                        <img src="myweb/pic-3.png" />
+                        <h1>Unlimited Access</h1>
+                        <p>Choose what you'd like to learn from out extensions subsciption library.</p>
+                    </div>
+                </div>
+            <div class="divbtntrial">
+                <div id="divstyle">
+                    <div id="divbox"></div>
+                    <div id="divbox2"></div>
+                    <div id="divbox3"></div>
+                </div>
+                <button type="submit" id="btntrial">Start Free Trial</button>
+            </div>
+            </section>
+
+            <section>
+                <div id="coursediv">
+                    <div id="coursecard">
+                    <h1>Browse our top courses</h1>
+                    <div id="divstyle">
+                        <div id="divbox"></div>
+                    </div>
+                    <p>hello this is the website i have made by my own if you like this please like this website and incaurage me make more and more 
+                        beautiful website and in improved form <br>Thank you</p>
+                    <button type="submit" id="btncourse">View all Courses</button>
+                    <div id="divstyle">
+                        <div id="divbox"></div>
+                        <div id="divbox2"></div>
+                        <div id="divbox3"></div>
+                    </div>
+                    </div>
+                    <img src="myweb/course.png" id="courseimg" />
+                </div>
+            </section>
+
+            <section>
+                <div id="divstartfree">
+                    <img src="myweb/offer.png" id="img2ndlast" />
+                    <div id="last2ndcard">
+                        <h1>Limitless learnings,limittless possibilities</h1>
+                        <div id="divstyle">
+                            <div id="divbox"></div>
+                            <p>hello this is the website i have made by my own if you like this please like this website and incaurage me make more and more 
+                                beautiful website and in improved form <br>Thank you</p>
+                                <button type="submit" id="btncourse">Start My Free Month</button>
+                                <div id="divstyle">
+                                    <div id="divbox"></div>
+                                    <div id="divbox2"></div>
+                                    <div id="divbox3"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div id="lastcard">
+                    <div>
+                        <div>
+                        <h1>Sign Up to join our learning community</h1>
+                            <input type="text" placeholder="Enter Name" id="" name="username" value="" >
+                            <br><br>
+                            <input type="email" placeholder="Enter Email" id="" name="email" value="" >
+                            <br><br>
+                            <input type="password" placeholder="Enter Password" id="" name="password" value="" >
+                            <br><br>
+                            <button type="submit" id="lastbtn1" >Sing up</button>
+                            <button type="submit" id="lastbtn2">Start Free Trial</button>
+
+                        </div>
+                    </div>
+                    <img src="myweb/contact.png" >
+                </div>
+            </section>
+            <hr style="width:80%; text-align:center;">
+            <footer>
+                <div style="width:100%; height:auto; margin:30px;">
+                    <table style="width:70%; text-align:left; margin:30px;">
+                        <tr>
+                            <th>About Us</th>
+                            <th>Product</th>
+                            <th>Support</th>
+                            <th>Explore</th>
+                        </tr>
+                        <tr>
+                            <td>Our planes</td>
+                            <td>Features</td>
+                            <td>Find a Nonprofit</td>
+                            <td>Request a Demo</td>
+                        </tr>
+                        <tr>
+                            <td>FAQs</td>
+                            <td>Free Trail</td>
+                            <td>Contact us</td>
+                            <td>Corporate Solutions</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                <img src="myweb/logo.png" id="logimg">
+                <span>support@xyz.com@2019xyz</span><br>
+                <button type="submit" id="btncourse">English</button>
+                </div>
+            </footer>
+
+        </main>
+    </body>
+</html>
